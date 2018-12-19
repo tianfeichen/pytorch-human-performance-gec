@@ -63,23 +63,23 @@ class App extends React.Component {
 
         return (
             <div>
-                <div className="form container">
+                <div className="form nes-container">
                     <form onSubmit={this.handleSubmit}>
                         <div className="field">
                             <label htmlFor="input">Input</label>
-                            <input type="text" id="input" className="input" name="input" size="50" maxLength="100"
+                            <input type="text" id="input" className="nes-input" name="input" size="50" maxLength="100"
                                 value={this.state.input} onChange={this.handleChange}></input>
                         </div>
                         <div>
-                            <button type="submit" id="correct-btn" className="btn is-primary">Correct</button>
+                            <button type="submit" id="correct-btn" className="nes-btn is-primary">Correct</button>
                             <div className="options">
                                 <label>
-                                    <input type="checkbox" className="checkbox" checked={this.state.showDiff}
+                                    <input type="checkbox" className="nes-checkbox" checked={this.state.showDiff}
                                         name="showDiff" onChange={this.handleOptionChange} />
                                     <span>Show diff</span>
                                 </label>
                                 <label>
-                                    <input type="checkbox" className="checkbox" checked={this.state.showAll}
+                                    <input type="checkbox" className="nes-checkbox" checked={this.state.showAll}
                                         name="showAll" onChange={this.handleOptionChange} />
                                     <span>Show all candidates</span>
                                 </label>
@@ -133,7 +133,7 @@ class Iteration extends React.Component {
         ))
 
         return (
-            <div className="iteration container with-title">
+            <div className="iteration nes-container with-title">
                 <h3 className="title">Iteration {this.props.index + 1}</h3>
                 { entries }
             </div>
@@ -160,10 +160,10 @@ class Entry extends React.Component {
         return (
             <div className="entry">
                 <div className="containers">
-                    <div className={"hypo-str container " + (this.props.color)}>
+                    <div className={"hypo-str nes-container " + (this.props.color)}>
                         <Tokens tokens={tokens} />
                     </div>
-                    <div className={"fluency-scores container " + (this.props.color)}>
+                    <div className={"fluency-scores nes-container " + (this.props.color)}>
                         {this.props.entry.fluency_scores.toFixed(4)}
                     </div>
                 </div>
@@ -190,11 +190,11 @@ class Tokens extends React.Component {
 class Message extends React.Component {
     render() {
         return (
-            <div className="balloon container">
+            <div className="balloon nes-container">
                 <div className="messages">
                     <div className="message from-left">
-                        <i className="bcrikko"></i>
-                        <div className="balloon from-left">
+                        <i className="nes-bcrikko"></i>
+                        <div className="nes-balloon from-left">
                             <p>{this.props.message}</p>
                         </div>
                     </div>
