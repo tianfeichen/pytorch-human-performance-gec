@@ -190,7 +190,6 @@ def main(args):
                     max_tokens = hypo_tokens_list[max_idx]
                     scorer.add(target_tokens, max_tokens)
                     hypoths.append(max_hypo_str)
-                    hypoths.append(max_hypo_str)
                     break
                 else:
                     # Keep boosting
