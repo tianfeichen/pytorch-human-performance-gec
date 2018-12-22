@@ -5,4 +5,6 @@ python ..\fairseq\preprocess.py^
     --validpref ..\corpus\lang-8-fairseq\lang8-valid^
     --testpref ..\corpus\lang-8-fairseq\lang8-test^
     --destdir ..\data-bin\lang-8-fairseq^
+    --nwordssrc 30000^
+    --nwordstgt 30000^
     --workers 4

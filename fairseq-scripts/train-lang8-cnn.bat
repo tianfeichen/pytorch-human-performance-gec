@@ -11,7 +11,6 @@ python ..\fairseq\train.py^
     --momentum 0.99^
     --lr 0.25^
     --dropout 0.2^
-    --max-tokens 1000^
-    --max-sentences 10^
+    --max-tokens 3000^
     --clip-norm 0.1^
     --fp16
