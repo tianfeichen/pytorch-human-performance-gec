@@ -337,7 +337,7 @@ def listen_to_web(args, max_positions, task, process_batch):
 
     # listen with web server
     print('server running at port: {}'.format(args.port))
-    http_server = WSGIServer(('', args.port), app)
+    http_server = WSGIServer(('0.0.0.0', args.port), app)
     http_server.serve_forever()
 
 
